@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
 import { motion } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
 
+const Header = ({ isMenuOpen, setIsMenuOpen }) => {
+  const navigate = useNavigate(); // ✅ Hook for navigation
 
-const Header= ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -39,6 +41,18 @@ const Header= ({ isMenuOpen, setIsMenuOpen }) => {
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
               Contact
             </a>
+
+            {/* ✅ Login Button */}
+            <motion.button
+              onClick={() => navigate('/login')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-blue-600 border border-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition"
+            >
+              Login
+            </motion.button>
+
+            {/* Existing Demo Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -78,7 +92,16 @@ const Header= ({ isMenuOpen, setIsMenuOpen }) => {
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Contact
               </a>
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium w-full">
+
+              {/* ✅ Login Button in Mobile Menu */}
+              <button
+                onClick={() => navigate('/login')}
+                className="text-blue-600 border border-blue-600 px-6 py-2 rounded-lg font-medium"
+              >
+                Login
+              </button>
+
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium">
                 Get Demo
               </button>
             </div>
