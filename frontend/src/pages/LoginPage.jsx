@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Eye, EyeOff, User, Lock, UserCheck, AlertCircle } from "lucide-react";
-import Header from "./Header";
+import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 

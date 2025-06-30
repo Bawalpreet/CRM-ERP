@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import LoginPage from './components/LoginPage';
-import SignupPage from './components/SignupPage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
 // Temporary placeholder components for role dashboards
 const ProjectManager = () => <h1>Project Manager Dashboard</h1>;
