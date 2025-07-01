@@ -27,7 +27,7 @@ const Header= ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">
+            {/* <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">
               Features
             </a>
             <a href="#modules" className="text-gray-700 hover:text-blue-600 transition-colors">
@@ -35,7 +35,7 @@ const Header= ({ isMenuOpen, setIsMenuOpen }) => {
             </a>
             <a href="#benefits" className="text-gray-700 hover:text-blue-600 transition-colors">
               Benefits
-            </a>
+            </a> */}
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
               Contact
             </a>
